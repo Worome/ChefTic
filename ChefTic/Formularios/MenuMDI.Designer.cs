@@ -58,14 +58,14 @@
             // periodosToolStripMenuItem
             // 
             this.periodosToolStripMenuItem.Name = "periodosToolStripMenuItem";
-            this.periodosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.periodosToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.periodosToolStripMenuItem.Text = "&Periodos";
             this.periodosToolStripMenuItem.Click += new System.EventHandler(this.periodosToolStripMenuItem_Click);
             // 
             // cerrarToolStripMenuItem
             // 
             this.cerrarToolStripMenuItem.Name = "cerrarToolStripMenuItem";
-            this.cerrarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cerrarToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.cerrarToolStripMenuItem.Text = "&Cerrar";
             this.cerrarToolStripMenuItem.Click += new System.EventHandler(this.cerrarToolStripMenuItem_Click);
             // 

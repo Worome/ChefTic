@@ -82,7 +82,6 @@
             this.txtPeriodo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPeriodo.Location = new System.Drawing.Point(599, 85);
-            this.txtPeriodo.MaxLength = 3;
             this.txtPeriodo.Name = "txtPeriodo";
             this.txtPeriodo.Size = new System.Drawing.Size(194, 23);
             this.txtPeriodo.TabIndex = 3;
@@ -102,6 +101,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(718, 297);
             this.btnCancelar.Name = "btnCancelar";
