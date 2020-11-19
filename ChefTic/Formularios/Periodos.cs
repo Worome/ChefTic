@@ -15,7 +15,7 @@ namespace ChefTic.Formularios
     public partial class Periodos : Form
     {
 
-        public string consultaTotal = "SELECT * FROM Periodos";
+        public string consultaTotal = "SELECT Codigo AS Código, Periodo FROM Periodos";
 
         public Periodos()
         {
@@ -24,15 +24,16 @@ namespace ChefTic.Formularios
 
         private void frmPeriodos_Load(object sender, EventArgs e)
         {
-            string codigos = ""; 
-            string periodos = "";
+            //string codigos = ""; 
+            //string periodos = "";
 
             try
             {
 
                 DataSet datosRecibidos = BaseDeDatos.procesosSql(consultaTotal);
-                codigos = datosRecibidos.Tables[0].Rows[0]["Codigo"].ToString();
-                periodos = datosRecibidos.Tables[0].Rows[0]["Periodo"].ToString();
+                //codigos = datosRecibidos.Tables[0].Rows[0]["Codigo"].ToString();
+                //periodos = datosRecibidos.Tables[0].Rows[0]["Periodo"].ToString();
+                dgvPeriodos.DataSource = datosRecibidos.Tables[0];
 
             } catch (Exception ex)
             {
@@ -43,8 +44,8 @@ namespace ChefTic.Formularios
             }            
 
 
-            txtCodigo.Text = codigos;
-            txtPeriodo.Text = periodos;
+            //txtCodigo.Text = codigos;
+            //txtPeriodo.Text = periodos;
 
         }
 
