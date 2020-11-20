@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BBDD\BaseDeDatos.cs" />
+    <Compile Include="OtrasClases\Mensajes.cs" />
     <Compile Include="Entidades\clPeriodos.cs" />
     <Compile Include="Formularios\MenuMDI.cs">
       <SubType>Form</SubType>

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ChefTic.BBDD;
+using ChefTic.OtrasClases;
 
 namespace ChefTic.Formularios
 {
@@ -31,7 +32,7 @@ namespace ChefTic.Formularios
             } catch (Exception ex)
             {
 
-                MessageBox.Show("Ha ocurrido el siguiente error: " + ex.Message);
+                Mensajes.MostrarMensajesError(ex.Message);
 
             }
     
@@ -43,7 +44,7 @@ namespace ChefTic.Formularios
 
             if (txtCodigo.Text == "")
             {
-                MessageBox.Show("El Código no puede estar vacío","Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Mensajes.MostrarMensajesError("El Código no puede estar vacío");
             }
             else
             {
@@ -57,7 +58,7 @@ namespace ChefTic.Formularios
                 catch (Exception ex)
                 {
 
-                    MessageBox.Show("Ha ocurrido el siguiente error: " + ex.Message);
+                    Mensajes.MostrarMensajesError(ex.Message);
 
                 }
 
@@ -88,7 +89,7 @@ namespace ChefTic.Formularios
             catch (Exception ex)
             {
 
-                MessageBox.Show("Ha ocurrido el siguiente error: " + ex.Message);
+                Mensajes.MostrarMensajesError(ex.Message);
 
             }
 
@@ -129,7 +130,7 @@ namespace ChefTic.Formularios
             catch (Exception ex)
             {
 
-                MessageBox.Show("Ha ocurrido el siguiente error: " + ex.Message);
+                Mensajes.MostrarMensajesError(ex.Message);
 
             }
         }
