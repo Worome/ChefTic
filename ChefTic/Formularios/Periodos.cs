@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 using ChefTic.BBDD;
 
 namespace ChefTic.Formularios
@@ -15,7 +14,7 @@ namespace ChefTic.Formularios
     public partial class Periodos : Form
     {
 
-        public string consultaTotal = "SELECT Codigo AS Código, Periodo FROM Periodos";
+        public string consultaTotal = "SELECT Id as Identificador, Codigo AS Código, Periodo AS Periodo FROM Periodos ORDER BY Id";        
 
         public Periodos()
         {
@@ -24,39 +23,115 @@ namespace ChefTic.Formularios
 
         private void frmPeriodos_Load(object sender, EventArgs e)
         {
-            //string codigos = ""; 
-            //string periodos = "";
-
             try
             {
-
                 DataSet datosRecibidos = BaseDeDatos.procesosSql(consultaTotal);
-                //codigos = datosRecibidos.Tables[0].Rows[0]["Codigo"].ToString();
-                //periodos = datosRecibidos.Tables[0].Rows[0]["Periodo"].ToString();
                 dgvPeriodos.DataSource = datosRecibidos.Tables[0];
 
             } catch (Exception ex)
             {
 
-
                 MessageBox.Show("Ha ocurrido el siguiente error: " + ex.Message);
 
-            }            
-
-
-            //txtCodigo.Text = codigos;
-            //txtPeriodo.Text = periodos;
-
+            }
+    
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+             string insercion = string.Format("EXEC InsertarPeriodos '{0}', '{1}'", txtCodigo.Text, txtPeriodo.Text);
 
+            if (txtCodigo.Text == "")
+            {
+                MessageBox.Show("El Código no puede estar vacío","Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                try
+                {
+
+                    BaseDeDatos.procesosSql(insercion);
+                    dgvPeriodos.DataSource = BaseDeDatos.procesosSql(consultaTotal).Tables[0];
+
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show("Ha ocurrido el siguiente error: " + ex.Message);
+
+                }
+
+                Limpiar();
+
+            }
+            
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+            string borrado = string.Format("EXEC EliminaPeriodos '{0}'", dgvPeriodos.CurrentRow.Cells["Código"].Value);
+
+            try
+            {
+
+                BaseDeDatos.procesosSql(borrado);
+                dgvPeriodos.DataSource = BaseDeDatos.procesosSql(consultaTotal).Tables[0];
+                Limpiar();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Ha ocurrido el siguiente error: " + ex.Message);
+
+            }
+
+        }
+
+        private void Limpiar()
+        {
+
+            txtCodigo.Text = "";
+            txtPeriodo.Text = "";
+            txtCodigo.Focus();
+
+        }
+
+        private void dgvPeriodos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
+            txtCodigo.Text = dgvPeriodos.CurrentRow.Cells["Código"].Value.ToString();
+            txtPeriodo.Text = dgvPeriodos.CurrentRow.Cells["Periodo"].Value.ToString();
+            
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+
+        {
+            int Identificador = Convert.ToInt32(dgvPeriodos.CurrentRow.Cells["Identificador"].Value);
+            
+            string actualiza = string.Format("EXEC ActualizarPeriodos '{0}', '{1}', '{2}'", Identificador, txtCodigo.Text, txtPeriodo.Text);
+
+            try
+            {
+
+                BaseDeDatos.procesosSql(actualiza);
+                dgvPeriodos.DataSource = BaseDeDatos.procesosSql(consultaTotal).Tables[0];
+                Limpiar();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Ha ocurrido el siguiente error: " + ex.Message);
+
+            }
         }
     }
 }
