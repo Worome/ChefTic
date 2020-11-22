@@ -56,5 +56,23 @@ namespace ChefTic
             ventanaCategorias.Show();
 
         }
+
+        private void comidasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            Comidas ventanaComidas = new Comidas();
+            ventanaComidas.MdiParent = this;
+            ventanaComidas.Show();
+
+        }
+
+        private void autoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            Autores ventanaAutores = new Autores();
+            ventanaAutores.MdiParent = this;
+            ventanaAutores.Show();
+
+        }
     }
 }

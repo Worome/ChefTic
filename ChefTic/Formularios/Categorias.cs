@@ -143,7 +143,7 @@ namespace ChefTic.Formularios
 
             string cadenaBusqueda = "";
 
-            if (btnBuscar.Text == "Filtrar")
+            if (btnBuscar.Text == "&Filtrar")
             {
 
                 if (txtCodigo.Text == "" && txtCategoria.Text == "")
@@ -158,7 +158,7 @@ namespace ChefTic.Formularios
 
                     cadenaBusqueda = "SELECT Id as Identificador, Codigo AS Código, Categoria AS Categoría FROM Categorias" +
                         " WHERE Codigo LIKE '%" + txtCodigo.Text + "%' ORDER BY Id";
-                    btnBuscar.Text = "Quitar Filtro";
+                    btnBuscar.Text = "&Quitar Filtro";
 
                     try
                     {
@@ -180,7 +180,7 @@ namespace ChefTic.Formularios
 
                     cadenaBusqueda = "SELECT Id as Identificador, Codigo AS Código, Categoria AS Categoría FROM Categorias" +
                          " WHERE Categoria LIKE '%" + txtCategoria.Text + "%' ORDER BY Id";
-                    btnBuscar.Text = "Quitar Filtro";
+                    btnBuscar.Text = "&Quitar Filtro";
 
                     try
                     {
@@ -203,7 +203,7 @@ namespace ChefTic.Formularios
             else
             {
 
-                btnBuscar.Text = "Filtrar";
+                btnBuscar.Text = "&Filtrar";
                 try
                 {
 

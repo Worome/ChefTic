@@ -66,11 +66,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BBDD\BaseDeDatos.cs" />
+    <Compile Include="Formularios\Autores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Autores.Designer.cs">
+      <DependentUpon>Autores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Categorias.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Categorias.Designer.cs">
       <DependentUpon>Categorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Comidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Comidas.Designer.cs">
+      <DependentUpon>Comidas.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Fuentes.cs">
       <SubType>Form</SubType>
@@ -100,8 +112,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Autores.resx">
+      <DependentUpon>Autores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Categorias.resx">
       <DependentUpon>Categorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Comidas.resx">
+      <DependentUpon>Comidas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Fuentes.resx">
       <DependentUpon>Fuentes.cs</DependentUpon>
@@ -150,18 +168,19 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Imagenes\authors.ico" />
+    <Content Include="Imagenes\authors.jpg" />
     <Content Include="Imagenes\balance.ico" />
     <Content Include="Imagenes\balance.png" />
     <Content Include="Imagenes\calendar.ico" />
     <Content Include="Imagenes\calendar.png" />
+    <Content Include="Imagenes\desayuno.ico" />
+    <Content Include="Imagenes\desayuno.jpg" />
     <Content Include="Imagenes\dialog-information.ico" />
     <Content Include="Imagenes\dialog-information.png" />
     <Content Include="Imagenes\fork_spoon.ico" />
     <Content Include="Imagenes\fork_spoon.png" />
     <Content Include="Imagenes\recipegroup_32.ico" />
-    <Content Include="Imagenes\user_login.ico" />
-    <Content Include="Imagenes\user_login.png" />
-    <Content Include="Imagenes\Usuario.png" />
     <Content Include="recipegroup_32.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
