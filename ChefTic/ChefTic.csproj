@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,9 +47,13 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>recipegroup_32.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,6 +66,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BBDD\BaseDeDatos.cs" />
+    <Compile Include="Formularios\Fuentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Fuentes.Designer.cs">
+      <DependentUpon>Fuentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\UnidadesMedida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\UnidadesMedida.Designer.cs">
+      <DependentUpon>UnidadesMedida.cs</DependentUpon>
+    </Compile>
     <Compile Include="OtrasClases\Mensajes.cs" />
     <Compile Include="Entidades\clPeriodos.cs" />
     <Compile Include="Formularios\MenuMDI.cs">
@@ -63,11 +94,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Fuentes.resx">
+      <DependentUpon>Fuentes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\MenuMDI.resx">
       <DependentUpon>MenuMDI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Periodos.resx">
       <DependentUpon>Periodos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\UnidadesMedida.resx">
+      <DependentUpon>UnidadesMedida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -91,16 +128,30 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Imagenes\balance.ico" />
     <Content Include="Imagenes\balance.png" />
     <Content Include="Imagenes\calendar.ico" />
     <Content Include="Imagenes\calendar.png" />
+    <Content Include="Imagenes\dialog-information.ico" />
+    <Content Include="Imagenes\dialog-information.png" />
     <Content Include="Imagenes\recipegroup_32.ico" />
     <Content Include="Imagenes\user_login.ico" />
     <Content Include="Imagenes\user_login.png" />
     <Content Include="Imagenes\Usuario.png" />
+    <Content Include="recipegroup_32.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

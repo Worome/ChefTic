@@ -18,7 +18,12 @@ namespace ChefTic
             InitializeComponent();
         }
 
-        private void periodosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void cerrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void periodosToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
 
             Periodos ventanaPeriodos = new Periodos();
@@ -27,9 +32,20 @@ namespace ChefTic
 
         }
 
-        private void cerrarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void unidadesDeMedidaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            UnidadesMedida ventanaUnidadesMedida = new UnidadesMedida();
+            ventanaUnidadesMedida.MdiParent = this;
+            ventanaUnidadesMedida.Show();
+        }
+
+        private void fuentesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            Fuentes ventanaFuentes = new Fuentes();
+            ventanaFuentes.MdiParent = this;
+            ventanaFuentes.Show();
+
         }
     }
 }

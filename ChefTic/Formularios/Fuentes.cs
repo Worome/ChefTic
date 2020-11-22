@@ -12,35 +12,39 @@ using ChefTic.OtrasClases;
 
 namespace ChefTic.Formularios
 {
-    public partial class Periodos : Form
+    public partial class Fuentes : Form
     {
+        public string consultaTotal = "SELECT Id as Identificador, Codigo AS Código, Fuente AS Fuente FROM Fuentes ORDER BY Id";
 
-        public string consultaTotal = "SELECT Id as Identificador, Codigo AS Código, Periodo AS Periodo FROM Periodos ORDER BY Id";        
-
-        public Periodos()
+        public Fuentes()
         {
             InitializeComponent();
         }
 
-        private void frmPeriodos_Load(object sender, EventArgs e)
+        private void Fuentes_Load(object sender, EventArgs e)
         {
+
+
             try
             {
                 DataSet datosRecibidos = BaseDeDatos.procesosSql(consultaTotal);
-                dgvPeriodos.DataSource = datosRecibidos.Tables[0];
+                dgvFuentes.DataSource = datosRecibidos.Tables[0];
 
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
 
                 Mensajes.MostrarMensajesError(ex.Message);
 
             }
-    
+
+
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-             string insercion = string.Format("EXEC InsertarPeriodos '{0}', '{1}'", txtCodigo.Text, txtPeriodo.Text);
+
+            string insercion = string.Format("EXEC InsertarFuentes '{0}', '{1}'", txtCodigo.Text, txtFuente.Text);
 
             if (txtCodigo.Text == "")
             {
@@ -52,7 +56,7 @@ namespace ChefTic.Formularios
                 {
 
                     BaseDeDatos.procesosSql(insercion);
-                    dgvPeriodos.DataSource = BaseDeDatos.procesosSql(consultaTotal).Tables[0];
+                    dgvFuentes.DataSource = BaseDeDatos.procesosSql(consultaTotal).Tables[0];
 
                 }
                 catch (Exception ex)
@@ -65,24 +69,26 @@ namespace ChefTic.Formularios
                 Limpiar();
 
             }
-            
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+
             this.Close();
+
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
 
-            string borrado = string.Format("EXEC EliminaPeriodos '{0}'", dgvPeriodos.CurrentRow.Cells["Código"].Value);
+            string borrado = string.Format("EXEC EliminaFuentes '{0}'", dgvFuentes.CurrentRow.Cells["Código"].Value);
 
             try
             {
 
                 BaseDeDatos.procesosSql(borrado);
-                dgvPeriodos.DataSource = BaseDeDatos.procesosSql(consultaTotal).Tables[0];
+                dgvFuentes.DataSource = BaseDeDatos.procesosSql(consultaTotal).Tables[0];
                 Limpiar();
 
             }
@@ -99,34 +105,26 @@ namespace ChefTic.Formularios
         {
 
             txtCodigo.Text = "";
-            txtPeriodo.Text = "";
+            txtFuente.Text = "";
             txtCodigo.Focus();
 
         }
 
-        private void dgvPeriodos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-
-            txtCodigo.Text = dgvPeriodos.CurrentRow.Cells["Código"].Value.ToString();
-            txtPeriodo.Text = dgvPeriodos.CurrentRow.Cells["Periodo"].Value.ToString();
-            
-        }
-
         private void btnModificar_Click(object sender, EventArgs e)
-
         {
-               if (txtCodigo.Text != "" && txtPeriodo.Text != "")
+
+            if (txtCodigo.Text != "" && txtFuente.Text != "")
             {
 
-                int Identificador = Convert.ToInt32(dgvPeriodos.CurrentRow.Cells["Identificador"].Value);
+                int Identificador = Convert.ToInt32(dgvFuentes.CurrentRow.Cells["Identificador"].Value);
 
-                string actualiza = string.Format("EXEC ActualizarPeriodos '{0}', '{1}', '{2}'", Identificador, txtCodigo.Text, txtPeriodo.Text);
+                string actualiza = string.Format("EXEC ActualizarFuentes '{0}', '{1}', '{2}'", Identificador, txtCodigo.Text, txtFuente.Text);
 
                 try
                 {
 
                     BaseDeDatos.procesosSql(actualiza);
-                    dgvPeriodos.DataSource = BaseDeDatos.procesosSql(consultaTotal).Tables[0];
+                    dgvFuentes.DataSource = BaseDeDatos.procesosSql(consultaTotal).Tables[0];
                     Limpiar();
 
                 }
@@ -138,6 +136,8 @@ namespace ChefTic.Formularios
                 }
 
             }
+
+
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -148,16 +148,17 @@ namespace ChefTic.Formularios
             if (btnBuscar.Text == "Filtrar")
             {
 
-                if (txtCodigo.Text == "" && txtPeriodo.Text == "")
+                if (txtCodigo.Text == "" && txtFuente.Text == "")
                 {
 
-                    Mensajes.MostrarMensajesError("El campo código o periodo debe tener algún valor");
+                    Mensajes.MostrarMensajesError("El campo código o fuente debe tener algún valor");
                     txtCodigo.Focus();
 
-                } else if (txtCodigo.Text != "")
+                }
+                else if (txtCodigo.Text != "")
                 {
 
-                    cadenaBusqueda = "SELECT Id as Identificador, Codigo AS Código, Periodo AS Periodo FROM Periodos" +
+                    cadenaBusqueda = "SELECT Id as Identificador, Codigo AS Código, Fuente AS Fuente FROM Fuentes" +
                         " WHERE Codigo LIKE '%" + txtCodigo.Text + "%' ORDER BY Id";
                     btnBuscar.Text = "Quitar Filtro";
 
@@ -165,7 +166,7 @@ namespace ChefTic.Formularios
                     {
 
                         DataSet datosRecibidos = BaseDeDatos.procesosSql(cadenaBusqueda);
-                        dgvPeriodos.DataSource = datosRecibidos.Tables[0];
+                        dgvFuentes.DataSource = datosRecibidos.Tables[0];
 
                     }
                     catch (Exception ex)
@@ -178,16 +179,16 @@ namespace ChefTic.Formularios
                 }
                 else
                 {
-                    
-                    cadenaBusqueda = "SELECT Id as Identificador, Codigo AS Código, Periodo AS Periodo FROM Periodos" +
-                         " WHERE Periodo LIKE '%" + txtPeriodo.Text + "%' ORDER BY Id";
+
+                    cadenaBusqueda = "SELECT Id as Identificador, Codigo AS Código, Fuente AS Fuente FROM Fuentes" +
+                         " WHERE Fuente LIKE '%" + txtFuente.Text + "%' ORDER BY Id";
                     btnBuscar.Text = "Quitar Filtro";
 
                     try
                     {
 
                         DataSet datosRecibidos = BaseDeDatos.procesosSql(cadenaBusqueda);
-                        dgvPeriodos.DataSource = datosRecibidos.Tables[0];
+                        dgvFuentes.DataSource = datosRecibidos.Tables[0];
 
                     }
                     catch (Exception ex)
@@ -200,7 +201,8 @@ namespace ChefTic.Formularios
 
                 }
 
-            } else
+            }
+            else
             {
 
                 btnBuscar.Text = "Filtrar";
@@ -208,7 +210,7 @@ namespace ChefTic.Formularios
                 {
 
                     DataSet datosRecibidos = BaseDeDatos.procesosSql(consultaTotal);
-                    dgvPeriodos.DataSource = datosRecibidos.Tables[0];
+                    dgvFuentes.DataSource = datosRecibidos.Tables[0];
                     Limpiar();
 
                 }
@@ -222,9 +224,17 @@ namespace ChefTic.Formularios
 
             }
 
+
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void dgvFuentes_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            txtCodigo.Text = dgvFuentes.CurrentRow.Cells["Código"].Value.ToString();
+            txtFuente.Text = dgvFuentes.CurrentRow.Cells["Fuente"].Value.ToString();
+
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
         {
             Limpiar();
         }
