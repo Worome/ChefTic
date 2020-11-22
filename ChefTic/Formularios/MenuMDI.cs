@@ -47,5 +47,14 @@ namespace ChefTic
             ventanaFuentes.Show();
 
         }
+
+        private void categoríasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            Categorias ventanaCategorias = new Categorias();
+            ventanaCategorias.MdiParent = this;
+            ventanaCategorias.Show();
+
+        }
     }
 }
