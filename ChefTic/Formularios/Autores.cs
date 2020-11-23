@@ -50,6 +50,7 @@ namespace ChefTic.Formularios
             if (txtCodigo.Text == "")
             {
                 Mensajes.MostrarMensajesError("El Código no puede estar vacío");
+                txtCodigo.Focus();
             }
             else
             {
@@ -252,6 +253,11 @@ namespace ChefTic.Formularios
         {
 
             Limpiar();
+
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
