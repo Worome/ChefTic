@@ -259,6 +259,8 @@ namespace ChefTic.Formularios
         private void txtEmail_TextChanged(object sender, EventArgs e)
         {
 
+            MessageBox.Show("Test");
+
         }
     }
 }
