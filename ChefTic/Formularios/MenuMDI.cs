@@ -74,5 +74,14 @@ namespace ChefTic
             ventanaAutores.Show();
 
         }
+
+        private void tiposDePlatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            TiposPlatos ventanaTiposPlatos = new TiposPlatos();
+            ventanaTiposPlatos.MdiParent = this;
+            ventanaTiposPlatos.Show();
+
+        }
     }
 }

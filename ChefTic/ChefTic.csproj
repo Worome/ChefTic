@@ -90,6 +90,12 @@
     <Compile Include="Formularios\Fuentes.Designer.cs">
       <DependentUpon>Fuentes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\TiposPlatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TiposPlatos.Designer.cs">
+      <DependentUpon>TiposPlatos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\UnidadesMedida.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,7 @@
     <Compile Include="Formularios\Periodos.Designer.cs">
       <DependentUpon>Periodos.cs</DependentUpon>
     </Compile>
+    <Compile Include="OtrasClases\Validaciones.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\Autores.resx">
@@ -129,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Periodos.resx">
       <DependentUpon>Periodos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TiposPlatos.resx">
+      <DependentUpon>TiposPlatos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\UnidadesMedida.resx">
       <DependentUpon>UnidadesMedida.cs</DependentUpon>
@@ -181,6 +191,8 @@
     <Content Include="Imagenes\fork_spoon.ico" />
     <Content Include="Imagenes\fork_spoon.png" />
     <Content Include="Imagenes\recipegroup_32.ico" />
+    <Content Include="Imagenes\TiposPlatos.ico" />
+    <Content Include="Imagenes\TiposPlatos.jpg" />
     <Content Include="recipegroup_32.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

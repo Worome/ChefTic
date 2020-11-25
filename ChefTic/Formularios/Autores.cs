@@ -191,7 +191,7 @@ namespace ChefTic.Formularios
 
                     cadenaBusqueda = "SELECT Id as Identificador, Codigo AS Código, Nombre AS Autor, Telefono AS Teléfono, " +
                         "Email AS [E-Mail], Web AS Web, Localidad AS Localidad, Pais AS País FROM Autores" +
-                        " WHERE Codigo LIKE '%" + txtNombre.Text + "%' ORDER BY Id";
+                        " WHERE Nombre LIKE '%" + txtNombre.Text + "%' ORDER BY Id";
                     btnBuscar.Text = "&Quitar Filtro";
 
                     try
@@ -256,10 +256,29 @@ namespace ChefTic.Formularios
 
         }
 
-        private void txtEmail_TextChanged(object sender, EventArgs e)
+        private void txtEmail_Validating(object sender, CancelEventArgs e)
         {
+            if (txtEmail.Text != "" && !Validaciones.CompruebaMail(txtEmail.Text))
+            {
 
-            MessageBox.Show("Test");
+                Mensajes.MostrarMensajesError("Dirección de email incorrecta");
+                txtEmail.SelectAll();
+                txtEmail.Focus();
+
+            }
+        }
+
+        private void txtWeb_Validating(object sender, CancelEventArgs e)
+        {
+            
+            if (txtWeb.Text != "" && !Validaciones.CompruebaWeb(txtWeb.Text))
+            {
+
+                Mensajes.MostrarMensajesError("Dirección web incorrecta");
+                txtWeb.SelectAll();
+                txtWeb .Focus();
+
+            }
 
         }
     }
