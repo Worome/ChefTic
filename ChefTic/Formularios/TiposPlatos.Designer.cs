@@ -58,6 +58,7 @@
             this.button1.TabIndex = 26;
             this.button1.Text = "&Limpiar campos";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnBuscar
             // 
@@ -70,6 +71,7 @@
             this.btnBuscar.TabIndex = 23;
             this.btnBuscar.Text = "&Filtrar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // label4
             // 
@@ -110,6 +112,7 @@
             this.btnModificar.TabIndex = 19;
             this.btnModificar.Text = "&Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnEliminar
             // 
@@ -122,6 +125,7 @@
             this.btnEliminar.TabIndex = 21;
             this.btnEliminar.Text = "&Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // dgvTiposPlatos
             // 
@@ -140,6 +144,7 @@
             this.dgvTiposPlatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTiposPlatos.Size = new System.Drawing.Size(460, 402);
             this.dgvTiposPlatos.TabIndex = 22;
+            this.dgvTiposPlatos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvTiposPlatos_CellMouseClick);
             // 
             // pictureBox1
             // 
@@ -164,6 +169,7 @@
             this.btnCancelar.TabIndex = 18;
             this.btnCancelar.Text = "&Cerrar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAceptar
             // 
@@ -176,6 +182,7 @@
             this.btnAceptar.TabIndex = 17;
             this.btnAceptar.Text = "&Guardar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // txtTipoPlato
             // 
@@ -185,7 +192,7 @@
             this.txtTipoPlato.Location = new System.Drawing.Point(760, 102);
             this.txtTipoPlato.Margin = new System.Windows.Forms.Padding(4);
             this.txtTipoPlato.Name = "txtTipoPlato";
-            this.txtTipoPlato.Size = new System.Drawing.Size(257, 26);
+            this.txtTipoPlato.Size = new System.Drawing.Size(280, 26);
             this.txtTipoPlato.TabIndex = 16;
             // 
             // label2
@@ -233,7 +240,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.CancelButton = this.btnCancelar;
-            this.ClientSize = new System.Drawing.Size(1068, 423);
+            this.ClientSize = new System.Drawing.Size(1068, 421);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.label4);
@@ -255,6 +262,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tipos de platos";
+            this.Load += new System.EventHandler(this.TiposPlatos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTiposPlatos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

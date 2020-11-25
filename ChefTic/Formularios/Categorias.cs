@@ -68,7 +68,6 @@ namespace ChefTic.Formularios
 
             }
 
-
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
