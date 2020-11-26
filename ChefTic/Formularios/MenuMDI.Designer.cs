@@ -40,8 +40,10 @@
             this.categoríasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comidasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fuentesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cerrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tiposDePlatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cerrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiposDeCocinadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.temporadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,14 +97,14 @@
             // autoresToolStripMenuItem
             // 
             this.autoresToolStripMenuItem.Name = "autoresToolStripMenuItem";
-            this.autoresToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.autoresToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
             this.autoresToolStripMenuItem.Text = "&Autores";
             this.autoresToolStripMenuItem.Click += new System.EventHandler(this.autoresToolStripMenuItem_Click);
             // 
             // periodosToolStripMenuItem
             // 
             this.periodosToolStripMenuItem.Name = "periodosToolStripMenuItem";
-            this.periodosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.periodosToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
             this.periodosToolStripMenuItem.Text = "&Periodos";
             this.periodosToolStripMenuItem.Click += new System.EventHandler(this.periodosToolStripMenuItem_Click_1);
             // 
@@ -112,6 +114,8 @@
             this.categoríasToolStripMenuItem,
             this.comidasToolStripMenuItem,
             this.fuentesToolStripMenuItem,
+            this.temporadasToolStripMenuItem,
+            this.tiposDeCocinadosToolStripMenuItem,
             this.tiposDePlatosToolStripMenuItem});
             this.recetasToolStripMenuItem.Name = "recetasToolStripMenuItem";
             this.recetasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
@@ -138,6 +142,13 @@
             this.fuentesToolStripMenuItem.Text = "&Fuentes";
             this.fuentesToolStripMenuItem.Click += new System.EventHandler(this.fuentesToolStripMenuItem_Click);
             // 
+            // tiposDePlatosToolStripMenuItem
+            // 
+            this.tiposDePlatosToolStripMenuItem.Name = "tiposDePlatosToolStripMenuItem";
+            this.tiposDePlatosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.tiposDePlatosToolStripMenuItem.Text = "&Tipos de platos";
+            this.tiposDePlatosToolStripMenuItem.Click += new System.EventHandler(this.tiposDePlatosToolStripMenuItem_Click);
+            // 
             // cerrarToolStripMenuItem
             // 
             this.cerrarToolStripMenuItem.Name = "cerrarToolStripMenuItem";
@@ -145,12 +156,19 @@
             this.cerrarToolStripMenuItem.Text = "&Cerrar";
             this.cerrarToolStripMenuItem.Click += new System.EventHandler(this.cerrarToolStripMenuItem_Click);
             // 
-            // tiposDePlatosToolStripMenuItem
+            // tiposDeCocinadosToolStripMenuItem
             // 
-            this.tiposDePlatosToolStripMenuItem.Name = "tiposDePlatosToolStripMenuItem";
-            this.tiposDePlatosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.tiposDePlatosToolStripMenuItem.Text = "&Tipos de platos";
-            this.tiposDePlatosToolStripMenuItem.Click += new System.EventHandler(this.tiposDePlatosToolStripMenuItem_Click);
+            this.tiposDeCocinadosToolStripMenuItem.Name = "tiposDeCocinadosToolStripMenuItem";
+            this.tiposDeCocinadosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.tiposDeCocinadosToolStripMenuItem.Text = "T&ipos de cocinados";
+            this.tiposDeCocinadosToolStripMenuItem.Click += new System.EventHandler(this.tiposDeCocinadosToolStripMenuItem_Click);
+            // 
+            // temporadasToolStripMenuItem
+            // 
+            this.temporadasToolStripMenuItem.Name = "temporadasToolStripMenuItem";
+            this.temporadasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.temporadasToolStripMenuItem.Text = "T&emporadas";
+            this.temporadasToolStripMenuItem.Click += new System.EventHandler(this.temporadasToolStripMenuItem_Click);
             // 
             // menuMDI
             // 
@@ -188,6 +206,8 @@
         private System.Windows.Forms.ToolStripMenuItem comidasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem autoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tiposDePlatosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tiposDeCocinadosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem temporadasToolStripMenuItem;
     }
 }
 

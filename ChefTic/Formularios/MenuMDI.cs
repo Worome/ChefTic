@@ -83,5 +83,21 @@ namespace ChefTic
             ventanaTiposPlatos.Show();
 
         }
+
+        private void tiposDeCocinadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cocinados ventanaCocinados = new Cocinados();
+            ventanaCocinados.MdiParent = this;
+            ventanaCocinados.Show();
+        }
+
+        private void temporadasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            Temporadas ventanaTemporadas = new Temporadas();
+            ventanaTemporadas.MdiParent = this;
+            ventanaTemporadas.Show();
+
+        }
     }
 }

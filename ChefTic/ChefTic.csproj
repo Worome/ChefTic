@@ -78,6 +78,12 @@
     <Compile Include="Formularios\Categorias.Designer.cs">
       <DependentUpon>Categorias.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Cocinados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Cocinados.Designer.cs">
+      <DependentUpon>Cocinados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Comidas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,12 @@
     </Compile>
     <Compile Include="Formularios\Fuentes.Designer.cs">
       <DependentUpon>Fuentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Temporadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Temporadas.Designer.cs">
+      <DependentUpon>Temporadas.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\TiposPlatos.cs">
       <SubType>Form</SubType>
@@ -125,6 +137,9 @@
     <EmbeddedResource Include="Formularios\Categorias.resx">
       <DependentUpon>Categorias.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Cocinados.resx">
+      <DependentUpon>Cocinados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Comidas.resx">
       <DependentUpon>Comidas.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Periodos.resx">
       <DependentUpon>Periodos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Temporadas.resx">
+      <DependentUpon>Temporadas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\TiposPlatos.resx">
       <DependentUpon>TiposPlatos.cs</DependentUpon>
@@ -184,6 +202,8 @@
     <Content Include="Imagenes\balance.png" />
     <Content Include="Imagenes\calendar.ico" />
     <Content Include="Imagenes\calendar.png" />
+    <Content Include="Imagenes\cocinado.ico" />
+    <Content Include="Imagenes\cocinado.jpg" />
     <Content Include="Imagenes\desayuno.ico" />
     <Content Include="Imagenes\desayuno.jpg" />
     <Content Include="Imagenes\dialog-information.ico" />
@@ -191,6 +211,8 @@
     <Content Include="Imagenes\fork_spoon.ico" />
     <Content Include="Imagenes\fork_spoon.png" />
     <Content Include="Imagenes\recipegroup_32.ico" />
+    <Content Include="Imagenes\Temporadas.ico" />
+    <Content Include="Imagenes\Temporadas.png" />
     <Content Include="Imagenes\TiposPlatos.ico" />
     <Content Include="Imagenes\TiposPlatos.jpg" />
     <Content Include="recipegroup_32.ico" />
