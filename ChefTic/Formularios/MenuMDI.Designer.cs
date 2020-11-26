@@ -40,10 +40,11 @@
             this.categoríasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comidasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fuentesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.temporadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiposDeCocinadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tiposDePlatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tiposDeCocinadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.temporadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dificultadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,7 +55,6 @@
             this.archivoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(800, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
@@ -97,14 +97,14 @@
             // autoresToolStripMenuItem
             // 
             this.autoresToolStripMenuItem.Name = "autoresToolStripMenuItem";
-            this.autoresToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
+            this.autoresToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.autoresToolStripMenuItem.Text = "&Autores";
             this.autoresToolStripMenuItem.Click += new System.EventHandler(this.autoresToolStripMenuItem_Click);
             // 
             // periodosToolStripMenuItem
             // 
             this.periodosToolStripMenuItem.Name = "periodosToolStripMenuItem";
-            this.periodosToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
+            this.periodosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.periodosToolStripMenuItem.Text = "&Periodos";
             this.periodosToolStripMenuItem.Click += new System.EventHandler(this.periodosToolStripMenuItem_Click_1);
             // 
@@ -113,6 +113,7 @@
             this.recetasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.categoríasToolStripMenuItem,
             this.comidasToolStripMenuItem,
+            this.dificultadToolStripMenuItem,
             this.fuentesToolStripMenuItem,
             this.temporadasToolStripMenuItem,
             this.tiposDeCocinadosToolStripMenuItem,
@@ -142,6 +143,20 @@
             this.fuentesToolStripMenuItem.Text = "&Fuentes";
             this.fuentesToolStripMenuItem.Click += new System.EventHandler(this.fuentesToolStripMenuItem_Click);
             // 
+            // temporadasToolStripMenuItem
+            // 
+            this.temporadasToolStripMenuItem.Name = "temporadasToolStripMenuItem";
+            this.temporadasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.temporadasToolStripMenuItem.Text = "T&emporadas";
+            this.temporadasToolStripMenuItem.Click += new System.EventHandler(this.temporadasToolStripMenuItem_Click);
+            // 
+            // tiposDeCocinadosToolStripMenuItem
+            // 
+            this.tiposDeCocinadosToolStripMenuItem.Name = "tiposDeCocinadosToolStripMenuItem";
+            this.tiposDeCocinadosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.tiposDeCocinadosToolStripMenuItem.Text = "T&ipos de cocinados";
+            this.tiposDeCocinadosToolStripMenuItem.Click += new System.EventHandler(this.tiposDeCocinadosToolStripMenuItem_Click);
+            // 
             // tiposDePlatosToolStripMenuItem
             // 
             this.tiposDePlatosToolStripMenuItem.Name = "tiposDePlatosToolStripMenuItem";
@@ -156,19 +171,12 @@
             this.cerrarToolStripMenuItem.Text = "&Cerrar";
             this.cerrarToolStripMenuItem.Click += new System.EventHandler(this.cerrarToolStripMenuItem_Click);
             // 
-            // tiposDeCocinadosToolStripMenuItem
+            // dificultadToolStripMenuItem
             // 
-            this.tiposDeCocinadosToolStripMenuItem.Name = "tiposDeCocinadosToolStripMenuItem";
-            this.tiposDeCocinadosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.tiposDeCocinadosToolStripMenuItem.Text = "T&ipos de cocinados";
-            this.tiposDeCocinadosToolStripMenuItem.Click += new System.EventHandler(this.tiposDeCocinadosToolStripMenuItem_Click);
-            // 
-            // temporadasToolStripMenuItem
-            // 
-            this.temporadasToolStripMenuItem.Name = "temporadasToolStripMenuItem";
-            this.temporadasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.temporadasToolStripMenuItem.Text = "T&emporadas";
-            this.temporadasToolStripMenuItem.Click += new System.EventHandler(this.temporadasToolStripMenuItem_Click);
+            this.dificultadToolStripMenuItem.Name = "dificultadToolStripMenuItem";
+            this.dificultadToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dificultadToolStripMenuItem.Text = "&Dificultad";
+            this.dificultadToolStripMenuItem.Click += new System.EventHandler(this.dificultadToolStripMenuItem_Click);
             // 
             // menuMDI
             // 
@@ -208,6 +216,7 @@
         private System.Windows.Forms.ToolStripMenuItem tiposDePlatosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tiposDeCocinadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem temporadasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dificultadToolStripMenuItem;
     }
 }
 

@@ -51,10 +51,10 @@
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(859, 319);
+            this.button1.Location = new System.Drawing.Point(859, 291);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(157, 37);
+            this.button1.Size = new System.Drawing.Size(157, 53);
             this.button1.TabIndex = 26;
             this.button1.Text = "&Limpiar campos";
             this.button1.UseVisualStyleBackColor = true;
@@ -64,10 +64,10 @@
             // 
             this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(678, 319);
+            this.btnBuscar.Location = new System.Drawing.Point(678, 291);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(141, 37);
+            this.btnBuscar.Size = new System.Drawing.Size(141, 53);
             this.btnBuscar.TabIndex = 23;
             this.btnBuscar.Text = "&Filtrar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -79,7 +79,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Snow;
-            this.label4.Location = new System.Drawing.Point(681, 231);
+            this.label4.Location = new System.Drawing.Point(681, 220);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(289, 18);
@@ -93,7 +93,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Snow;
-            this.label3.Location = new System.Drawing.Point(685, 212);
+            this.label3.Location = new System.Drawing.Point(685, 201);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(284, 18);
@@ -105,10 +105,10 @@
             // 
             this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(849, 363);
+            this.btnModificar.Location = new System.Drawing.Point(849, 359);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(100, 37);
+            this.btnModificar.Size = new System.Drawing.Size(100, 53);
             this.btnModificar.TabIndex = 19;
             this.btnModificar.Text = "&Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
@@ -118,10 +118,10 @@
             // 
             this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(959, 363);
+            this.btnEliminar.Location = new System.Drawing.Point(959, 359);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(100, 37);
+            this.btnEliminar.Size = new System.Drawing.Size(100, 53);
             this.btnEliminar.TabIndex = 21;
             this.btnEliminar.Text = "&Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -162,10 +162,10 @@
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(738, 363);
+            this.btnCancelar.Location = new System.Drawing.Point(738, 359);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(100, 37);
+            this.btnCancelar.Size = new System.Drawing.Size(100, 53);
             this.btnCancelar.TabIndex = 18;
             this.btnCancelar.Text = "&Cerrar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -175,12 +175,12 @@
             // 
             this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.Location = new System.Drawing.Point(627, 363);
+            this.btnAceptar.Location = new System.Drawing.Point(627, 359);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(100, 37);
+            this.btnAceptar.Size = new System.Drawing.Size(100, 53);
             this.btnAceptar.TabIndex = 17;
-            this.btnAceptar.Text = "&Guardar";
+            this.btnAceptar.Text = "&Guardar Nuevo";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 

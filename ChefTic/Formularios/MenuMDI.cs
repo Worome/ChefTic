@@ -99,5 +99,14 @@ namespace ChefTic
             ventanaTemporadas.Show();
 
         }
+
+        private void dificultadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            Dificultad ventanaDificultad = new Dificultad();
+            ventanaDificultad.MdiParent = this;
+            ventanaDificultad.Show();
+
+        }
     }
 }

@@ -39,7 +39,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dgvTemporadas = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtCocinado = new System.Windows.Forms.TextBox();
+            this.txtTemporada = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,74 +51,80 @@
             // 
             this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(850, 365);
+            this.btnModificar.Location = new System.Drawing.Point(850, 360);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(100, 37);
+            this.btnModificar.Size = new System.Drawing.Size(100, 53);
             this.btnModificar.TabIndex = 81;
             this.btnModificar.Text = "&Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnEliminar
             // 
             this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(960, 365);
+            this.btnEliminar.Location = new System.Drawing.Point(960, 360);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(100, 37);
+            this.btnEliminar.Size = new System.Drawing.Size(100, 53);
             this.btnEliminar.TabIndex = 82;
             this.btnEliminar.Text = "&Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(739, 365);
+            this.btnCancelar.Location = new System.Drawing.Point(739, 360);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(100, 37);
+            this.btnCancelar.Size = new System.Drawing.Size(100, 53);
             this.btnCancelar.TabIndex = 80;
             this.btnCancelar.Text = "&Cerrar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAceptar
             // 
             this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.Location = new System.Drawing.Point(628, 365);
+            this.btnAceptar.Location = new System.Drawing.Point(628, 360);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(100, 37);
+            this.btnAceptar.Size = new System.Drawing.Size(100, 53);
             this.btnAceptar.TabIndex = 79;
-            this.btnAceptar.Text = "&Guardar";
+            this.btnAceptar.Text = "&Guardar Nuevo";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnLimpiar
             // 
             this.btnLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(858, 318);
+            this.btnLimpiar.Location = new System.Drawing.Point(858, 300);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(157, 37);
+            this.btnLimpiar.Size = new System.Drawing.Size(157, 53);
             this.btnLimpiar.TabIndex = 78;
             this.btnLimpiar.Text = "&Limpiar campos";
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnBuscar
             // 
             this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(679, 318);
+            this.btnBuscar.Location = new System.Drawing.Point(679, 300);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(141, 37);
+            this.btnBuscar.Size = new System.Drawing.Size(141, 53);
             this.btnBuscar.TabIndex = 77;
             this.btnBuscar.Text = "&Filtrar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // label4
             // 
@@ -126,7 +132,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Snow;
-            this.label4.Location = new System.Drawing.Point(683, 230);
+            this.label4.Location = new System.Drawing.Point(683, 218);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(289, 18);
@@ -140,7 +146,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Snow;
-            this.label3.Location = new System.Drawing.Point(687, 212);
+            this.label3.Location = new System.Drawing.Point(687, 200);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(280, 18);
@@ -165,6 +171,7 @@
             this.dgvTemporadas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTemporadas.Size = new System.Drawing.Size(460, 402);
             this.dgvTemporadas.TabIndex = 74;
+            this.dgvTemporadas.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvTemporadas_CellMouseClick);
             // 
             // pictureBox1
             // 
@@ -177,16 +184,16 @@
             this.pictureBox1.TabIndex = 73;
             this.pictureBox1.TabStop = false;
             // 
-            // txtCocinado
+            // txtTemporada
             // 
-            this.txtCocinado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCocinado.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCocinado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCocinado.Location = new System.Drawing.Point(732, 101);
-            this.txtCocinado.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCocinado.Name = "txtCocinado";
-            this.txtCocinado.Size = new System.Drawing.Size(257, 26);
-            this.txtCocinado.TabIndex = 72;
+            this.txtTemporada.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTemporada.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtTemporada.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTemporada.Location = new System.Drawing.Point(752, 101);
+            this.txtTemporada.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTemporada.Name = "txtTemporada";
+            this.txtTemporada.Size = new System.Drawing.Size(288, 26);
+            this.txtTemporada.TabIndex = 72;
             // 
             // label2
             // 
@@ -233,7 +240,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.CancelButton = this.btnCancelar;
-            this.ClientSize = new System.Drawing.Size(1068, 423);
+            this.ClientSize = new System.Drawing.Size(1068, 421);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnCancelar);
@@ -244,7 +251,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dgvTemporadas);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.txtCocinado);
+            this.Controls.Add(this.txtTemporada);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label1);
@@ -275,7 +282,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvTemporadas;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox txtCocinado;
+        private System.Windows.Forms.TextBox txtTemporada;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label1;
