@@ -108,6 +108,12 @@
     <Compile Include="Formularios\Fuentes.Designer.cs">
       <DependentUpon>Fuentes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Publicaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Publicaciones.Designer.cs">
+      <DependentUpon>Publicaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Temporadas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,9 @@
     <EmbeddedResource Include="Formularios\Autores.resx">
       <DependentUpon>Autores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Calorias.resx">
+      <DependentUpon>Calorias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Categorias.resx">
       <DependentUpon>Categorias.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Periodos.resx">
       <DependentUpon>Periodos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Publicaciones.resx">
+      <DependentUpon>Publicaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Temporadas.resx">
       <DependentUpon>Temporadas.cs</DependentUpon>
@@ -217,6 +229,8 @@
     <Content Include="Imagenes\balance.png" />
     <Content Include="Imagenes\calendar.ico" />
     <Content Include="Imagenes\calendar.png" />
+    <Content Include="Imagenes\calorias.ico" />
+    <Content Include="Imagenes\calorias.jpg" />
     <Content Include="Imagenes\cocinado.ico" />
     <Content Include="Imagenes\cocinado.jpg" />
     <Content Include="Imagenes\desayuno.ico" />
@@ -227,6 +241,8 @@
     <Content Include="Imagenes\Dificultad.png" />
     <Content Include="Imagenes\fork_spoon.ico" />
     <Content Include="Imagenes\fork_spoon.png" />
+    <Content Include="Imagenes\publicacion.ico" />
+    <Content Include="Imagenes\publicacion.png" />
     <Content Include="Imagenes\recipegroup_32.ico" />
     <Content Include="Imagenes\Temporadas.ico" />
     <Content Include="Imagenes\Temporadas.png" />

@@ -37,14 +37,16 @@
             this.autoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.periodosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recetasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.caloríasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoríasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comidasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dificultadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fuentesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.temporadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tiposDeCocinadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tiposDePlatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dificultadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.publicacionesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +54,8 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.archivoToolStripMenuItem});
+            this.archivoToolStripMenuItem,
+            this.publicacionesToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 28);
@@ -111,6 +114,7 @@
             // recetasToolStripMenuItem
             // 
             this.recetasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.caloríasToolStripMenuItem,
             this.categoríasToolStripMenuItem,
             this.comidasToolStripMenuItem,
             this.dificultadToolStripMenuItem,
@@ -122,45 +126,59 @@
             this.recetasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.recetasToolStripMenuItem.Text = "&Recetas";
             // 
+            // caloríasToolStripMenuItem
+            // 
+            this.caloríasToolStripMenuItem.Name = "caloríasToolStripMenuItem";
+            this.caloríasToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
+            this.caloríasToolStripMenuItem.Text = "C&alorías";
+            this.caloríasToolStripMenuItem.Click += new System.EventHandler(this.caloríasToolStripMenuItem_Click);
+            // 
             // categoríasToolStripMenuItem
             // 
             this.categoríasToolStripMenuItem.Name = "categoríasToolStripMenuItem";
-            this.categoríasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.categoríasToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
             this.categoríasToolStripMenuItem.Text = "&Categorías";
             this.categoríasToolStripMenuItem.Click += new System.EventHandler(this.categoríasToolStripMenuItem_Click);
             // 
             // comidasToolStripMenuItem
             // 
             this.comidasToolStripMenuItem.Name = "comidasToolStripMenuItem";
-            this.comidasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.comidasToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
             this.comidasToolStripMenuItem.Text = "C&omidas";
             this.comidasToolStripMenuItem.Click += new System.EventHandler(this.comidasToolStripMenuItem_Click);
+            // 
+            // dificultadToolStripMenuItem
+            // 
+            this.dificultadToolStripMenuItem.Name = "dificultadToolStripMenuItem";
+            this.dificultadToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
+            this.dificultadToolStripMenuItem.Text = "&Dificultad";
+            this.dificultadToolStripMenuItem.Click += new System.EventHandler(this.dificultadToolStripMenuItem_Click);
             // 
             // fuentesToolStripMenuItem
             // 
             this.fuentesToolStripMenuItem.Name = "fuentesToolStripMenuItem";
-            this.fuentesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.fuentesToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
             this.fuentesToolStripMenuItem.Text = "&Fuentes";
             this.fuentesToolStripMenuItem.Click += new System.EventHandler(this.fuentesToolStripMenuItem_Click);
             // 
             // temporadasToolStripMenuItem
             // 
             this.temporadasToolStripMenuItem.Name = "temporadasToolStripMenuItem";
-            this.temporadasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.temporadasToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
             this.temporadasToolStripMenuItem.Text = "T&emporadas";
             this.temporadasToolStripMenuItem.Click += new System.EventHandler(this.temporadasToolStripMenuItem_Click);
             // 
             // tiposDeCocinadosToolStripMenuItem
             // 
             this.tiposDeCocinadosToolStripMenuItem.Name = "tiposDeCocinadosToolStripMenuItem";
-            this.tiposDeCocinadosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.tiposDeCocinadosToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
             this.tiposDeCocinadosToolStripMenuItem.Text = "T&ipos de cocinados";
             this.tiposDeCocinadosToolStripMenuItem.Click += new System.EventHandler(this.tiposDeCocinadosToolStripMenuItem_Click);
             // 
             // tiposDePlatosToolStripMenuItem
             // 
             this.tiposDePlatosToolStripMenuItem.Name = "tiposDePlatosToolStripMenuItem";
-            this.tiposDePlatosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.tiposDePlatosToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
             this.tiposDePlatosToolStripMenuItem.Text = "&Tipos de platos";
             this.tiposDePlatosToolStripMenuItem.Click += new System.EventHandler(this.tiposDePlatosToolStripMenuItem_Click);
             // 
@@ -171,12 +189,12 @@
             this.cerrarToolStripMenuItem.Text = "&Cerrar";
             this.cerrarToolStripMenuItem.Click += new System.EventHandler(this.cerrarToolStripMenuItem_Click);
             // 
-            // dificultadToolStripMenuItem
+            // publicacionesToolStripMenuItem1
             // 
-            this.dificultadToolStripMenuItem.Name = "dificultadToolStripMenuItem";
-            this.dificultadToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.dificultadToolStripMenuItem.Text = "&Dificultad";
-            this.dificultadToolStripMenuItem.Click += new System.EventHandler(this.dificultadToolStripMenuItem_Click);
+            this.publicacionesToolStripMenuItem1.Name = "publicacionesToolStripMenuItem1";
+            this.publicacionesToolStripMenuItem1.Size = new System.Drawing.Size(113, 24);
+            this.publicacionesToolStripMenuItem1.Text = "Publicaciones";
+            this.publicacionesToolStripMenuItem1.Click += new System.EventHandler(this.publicacionesToolStripMenuItem1_Click);
             // 
             // menuMDI
             // 
@@ -217,6 +235,8 @@
         private System.Windows.Forms.ToolStripMenuItem tiposDeCocinadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem temporadasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dificultadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem caloríasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem publicacionesToolStripMenuItem1;
     }
 }
 

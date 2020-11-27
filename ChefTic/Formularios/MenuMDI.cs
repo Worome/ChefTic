@@ -108,5 +108,23 @@ namespace ChefTic
             ventanaDificultad.Show();
 
         }
+
+        private void caloríasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            Calorias ventanaCalorias = new Calorias();
+            ventanaCalorias.MdiParent = this;
+            ventanaCalorias.Show();
+
+        }
+
+        private void publicacionesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+            Publicaciones ventanaPublicaciones = new Publicaciones();
+            ventanaPublicaciones.MdiParent = this;
+            ventanaPublicaciones.Show();
+
+        }
     }
 }
