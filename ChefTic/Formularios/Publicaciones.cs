@@ -16,7 +16,8 @@ namespace ChefTic.Formularios
     {
 
         public string consultaPeriodos = "SELECT Codigo AS Codigo, Periodo AS Periodo FROM Periodos ORDER BY Periodo";
-        //public string consultaTotal = "SELECT Id as Identificador, Codigo AS Código, Calorias AS Calorías FROM Calorias ORDER BY Id";
+        /* La siguiente se tiene que hacer con un inner join para obtener el valor del periodo???
+        public string consultaTotal = "SELECT Id as Identificador, Codigo AS Código, Calorias AS Calorías FROM Calorias ORDER BY Id";*/
         public string periodoSeleccionado = "";
 
         public Publicaciones()
@@ -27,24 +28,7 @@ namespace ChefTic.Formularios
         private void Publicaciones_Load(object sender, EventArgs e)
         {
 
-            try
-            {
-
-                DataSet datosPeriodos = BaseDeDatos.procesosSql(consultaPeriodos);
-                cbPeriodos.DataSource = datosPeriodos.Tables[0];
-
-                cbPeriodos.ValueMember = "Codigo";
-                cbPeriodos.DisplayMember = "Periodo";
-
-
-            }
-            catch (Exception)
-            {
-
-
-
-            }
-
+            cargarCombo();
 
         }
 
@@ -65,7 +49,32 @@ namespace ChefTic.Formularios
         {
             Periodos ventanaPeriodo = new Periodos();
             ventanaPeriodo.ShowDialog();
+            cargarCombo();
 
         }
+
+        private void cargarCombo()
+        {
+
+            try
+            {
+
+                DataSet datosPeriodos = BaseDeDatos.procesosSql(consultaPeriodos);
+                cbPeriodos.DataSource = datosPeriodos.Tables[0];
+
+                cbPeriodos.ValueMember = "Codigo";
+                cbPeriodos.DisplayMember = "Periodo";
+
+
+            }
+            catch (Exception ex)
+            {
+
+                Mensajes.MostrarMensajesError(ex.Message);
+
+            }
+
+        }
+
     }
 }
