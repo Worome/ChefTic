@@ -125,6 +125,7 @@
             this.cbPeriodos.Name = "cbPeriodos";
             this.cbPeriodos.Size = new System.Drawing.Size(298, 28);
             this.cbPeriodos.TabIndex = 3;
+            this.cbPeriodos.SelectedIndexChanged += new System.EventHandler(this.cbPeriodos_SelectedIndexChanged);
             // 
             // btnPeriodos
             // 
@@ -135,6 +136,7 @@
             this.btnPeriodos.TabIndex = 4;
             this.btnPeriodos.Text = "...";
             this.btnPeriodos.UseVisualStyleBackColor = true;
+            this.btnPeriodos.Click += new System.EventHandler(this.btnPeriodos_Click);
             // 
             // txtPrecio
             // 
@@ -417,6 +419,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Publicaciones";
             this.Text = "Publicaciones";
+            this.Load += new System.EventHandler(this.Publicaciones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPublicaciones)).EndInit();
             this.ResumeLayout(false);

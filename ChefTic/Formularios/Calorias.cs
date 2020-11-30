@@ -35,6 +35,7 @@ namespace ChefTic.Formularios
 
             try
             {
+                
                 DataSet datosRecibidos = BaseDeDatos.procesosSql(consultaTotal);
                 dgvCalorias.DataSource = datosRecibidos.Tables[0];
 
