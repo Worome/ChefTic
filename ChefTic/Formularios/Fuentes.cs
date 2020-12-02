@@ -81,23 +81,30 @@ namespace ChefTic.Formularios
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-
-            string borrado = string.Format("EXEC EliminaFuentes '{0}'", dgvFuentes.CurrentRow.Cells["Código"].Value);
-
-            try
+            if (txtCodigo.Text != "" && MessageBox.Show("¿Seguro que quieres borrar: " + txtCodigo.Text + "?",
+                "Eliminar registro", MessageBoxButtons.OKCancel, MessageBoxIcon.Question,
+                MessageBoxDefaultButton.Button2) == DialogResult.OK)
             {
 
-                BaseDeDatos.procesosSql(borrado);
-                dgvFuentes.DataSource = BaseDeDatos.procesosSql(consultaTotal).Tables[0];
-                Limpiar();
+                string borrado = string.Format("EXEC EliminaFuentes '{0}'", dgvFuentes.CurrentRow.Cells["Código"].Value);
+
+                try
+                {
+
+                    BaseDeDatos.procesosSql(borrado);
+                    dgvFuentes.DataSource = BaseDeDatos.procesosSql(consultaTotal).Tables[0];
+                    Limpiar();
+
+                }
+                catch (Exception ex)
+                {
+
+                    Mensajes.MostrarMensajesError(ex.Message);
+
+                }
 
             }
-            catch (Exception ex)
-            {
 
-                Mensajes.MostrarMensajesError(ex.Message);
-
-            }
 
         }
 

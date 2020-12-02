@@ -100,14 +100,14 @@
             // autoresToolStripMenuItem
             // 
             this.autoresToolStripMenuItem.Name = "autoresToolStripMenuItem";
-            this.autoresToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.autoresToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
             this.autoresToolStripMenuItem.Text = "&Autores";
             this.autoresToolStripMenuItem.Click += new System.EventHandler(this.autoresToolStripMenuItem_Click);
             // 
             // periodosToolStripMenuItem
             // 
             this.periodosToolStripMenuItem.Name = "periodosToolStripMenuItem";
-            this.periodosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.periodosToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
             this.periodosToolStripMenuItem.Text = "&Periodos";
             this.periodosToolStripMenuItem.Click += new System.EventHandler(this.periodosToolStripMenuItem_Click_1);
             // 
@@ -185,6 +185,7 @@
             // cerrarToolStripMenuItem
             // 
             this.cerrarToolStripMenuItem.Name = "cerrarToolStripMenuItem";
+            this.cerrarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
             this.cerrarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.cerrarToolStripMenuItem.Text = "&Cerrar";
             this.cerrarToolStripMenuItem.Click += new System.EventHandler(this.cerrarToolStripMenuItem_Click);
